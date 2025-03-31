@@ -1,5 +1,7 @@
 <button class="btn btn-outline-light position-relative" disabled>
-  <i class="bi bi-cart"></i>
+  <svg width="20" height="20" fill="white">
+    <use xlink:href="../../../assets/icons/cart.svg"></use>
+  </svg>
   <span *ngIf="cartCount > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     {{cartCount}}
   </span>

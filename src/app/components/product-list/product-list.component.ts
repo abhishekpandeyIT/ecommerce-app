@@ -4,9 +4,10 @@ import { CartService } from '../../services/cart.service';
 import { ProductService } from '../../services/product.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TruncatePipe } from '../../shared/pipes/truncate.pipe';
 
 @Component({
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule,TruncatePipe],
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
