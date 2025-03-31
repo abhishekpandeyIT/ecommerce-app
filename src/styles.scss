@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Bootstrap */
+@use "bootstrap/scss/bootstrap" as bs;
+
+/* Custom styles */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 56px; // For fixed header
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+footer {
+  background-color: bs.$dark;
+  color: bs.$light;
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+.product-card {
+  transition: transform 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+}
+
+.zoomed {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  cursor: zoom-out;
+  z-index: 1000;
+  position: relative;
+}
+
+/* Toast customization */
+.toast-container .ngx-toastr {
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  border-radius: bs.$border-radius;
+}
