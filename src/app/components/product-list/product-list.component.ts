@@ -17,7 +17,7 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private cartService: CartService,
-    private toastr: ToastrService
+    // private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -29,9 +29,11 @@ export class ProductListComponent implements OnInit {
 
   addToCart(product: any): void {
     this.cartService.addToCart(product);
-    this.toastr.success(`${product.name} added to cart!`, 'Success', {
-      positionClass: 'toast-bottom-right',
-      progressBar: true
-    });
+    console.log(`${product.name} added to cart!`);
+    
+    // this.toastr.success(`${product.name} added to cart!`, 'Success', {
+    //   positionClass: 'toast-bottom-right',
+    //   progressBar: true
+    // });
   }
 }
