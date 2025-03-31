@@ -1,5 +1,5 @@
 /* Import Bootstrap */
-@use "bootstrap/scss/bootstrap" as bs;
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Custom styles */
 body {
@@ -15,8 +15,8 @@ body {
 }
 
 footer {
-  background-color: bs.$dark;
-  color: bs.$light;
+  background-color: black;
+  color: white;
   padding: 1.5rem 0;
   margin-top: auto;
 }
@@ -49,5 +49,5 @@ footer {
 /* Toast customization */
 .toast-container .ngx-toastr {
   box-shadow: 0 0 12px rgba(0,0,0,0.15);
-  border-radius: bs.$border-radius;
+  border-radius: 2px;
 }

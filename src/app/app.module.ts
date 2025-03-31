@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthModule } from '@auth0/auth0-angular';
@@ -12,9 +12,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { CommonModule } from '@angular/common';
-import { CartService } from './services/cart.service';
-import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +20,7 @@ import { ProductService } from './services/product.service';
     FooterComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    CartIconComponent,
-    CartService,
-    ProductService,
+    CartIconComponent
   ],
   imports: [
     BrowserModule,
@@ -37,11 +32,11 @@ import { ProductService } from './services/product.service';
       domain: 'dev-ao5eqdrogj30tjgj.us.auth0.com',
       clientId: 'BHSd9QKRM4TaGosVrGCtfi7DQ4e8OUJK',
       authorizationParams: {
-        redirect_uri: window.location.origin,
-      },
-    }),
+        redirect_uri: window.location.origin
+      }
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
